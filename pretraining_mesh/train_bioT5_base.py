@@ -74,7 +74,7 @@ gin.parse_config_file(
 
 def dumping_dataset(split, shuffle_files = False):
     del shuffle_files
-    files_name_pubmed = list(map(lambda x: x.strip(), subprocess.run(['gsutil', 'ls', 'gs://vien-translation/raw/filtered_len_pubmed*.txt'], stdout=subprocess.PIPE).stdout.splitlines()))
+    files_name_pubmed = list(map(lambda x: x.strip(), subprocess.run(['gsutil', 'ls', 'gs://vien-translation/raw/filtered_len_pubmed_1024_noen/*.txt'], stdout=subprocess.PIPE).stdout.splitlines()))
 
     shuffle(files_name_pubmed)
 
